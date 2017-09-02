@@ -1,5 +1,5 @@
 // Change the url to the domain of your app
-exports.url = 'http://localhost:3090';
+exports.url = 'https://nahtamatudloomad-sendgrid.herokuapp.com';
 
 exports.senderEmail = "info@nahtamatudloomad.ee";
 exports.senderName = "Nähtamatud Loomad";
