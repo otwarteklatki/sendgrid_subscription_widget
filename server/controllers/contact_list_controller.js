@@ -6,10 +6,10 @@ const Settings = require('../../settings');
 const optIn = 'opt-in';
 
 function prepareConfirmationEmail(reqBody) {
-	const subject = "Please Confirm Your Email Address";
+	const subject = "Palun kinnita oma e-posti aadress";
 	const url = formatUrl(Settings.url) + '/success';
-	const link = "<a href='" + url + "'>this link</a>"
-	const mailText = "Thanks for signing up! Click " + link + " to sign up!  This link will be active for 24 hours.";
+	const link = "<a href='" + url + "'>sellele lingile</a>"
+	const mailText = "Tänan liitumast! Kliki " + link + ", et kinnitada oma e-posti aadress! Link on aktiivne 24 tundi.";
 
 	var emailBody = {
 	  personalizations: [
@@ -52,8 +52,8 @@ function prepareConfirmationEmail(reqBody) {
 }
 
 function prepareNotificationEmail(reqBody) {
-	const subject = "New email signup";
-	const mailText = "A new person just confirmed they would look to receive your emails via your email subscription widget.<br/><b>Name: </b>" + reqBody.first_name + " " + reqBody.last_name + "<br/><b>Email: </b>" + reqBody.email;
+	const subject = "Uus uudiskirjaga liituja";
+	const mailText = "Uudiskirjaga on liitunud uus isik.<br/><b>Nimi: </b>" + reqBody.first_name + " " + reqBody.last_name + "<br/><b>E-post: </b>" + reqBody.email;
 
 	var emailBody = {
 	  personalizations: [
